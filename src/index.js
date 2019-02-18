@@ -97,7 +97,9 @@ class SmoothPinCodeInput extends Component {
       textStyleFocused,
       keyboardType,
       animationFocused,
-      ...props
+      autoCorrect,
+      autoComplete,
+      autoCapitalize
     } = this.props;
     const { maskDelay, focused } = this.state;
     return (
@@ -182,7 +184,9 @@ class SmoothPinCodeInput extends Component {
             opacity: 0,
             textAlign: "center"
           }}
-          {...props}
+          autoCorrect={autoCorrect}
+          autoComplete={autoComplete}
+          autoCapitalize={autoCapitalize}
         />
       </Animatable.View>
     );
